@@ -1,0 +1,28 @@
+/*
+ * Start Bootstrap - Heroic Features (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+	padding-top: 70px;
+	background-image: url("https://static.pexels.com/photos/30732/pexels-photo-30732.jpg");
+	
+     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.hero-spacer {
+    margin-top: 20px;
+    
+    background-image: url("http://www.wolfexperience.com/wp-content/uploads/2016/01/social-media.jpg");
+    background-size: 1270px 350px;
+}
+
+.hero-feature {
+    margin-bottom: 30px;
+    
+}
+
+footer {
+    margin: 50px 0;
+}

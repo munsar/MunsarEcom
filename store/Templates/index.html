@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Next Gen Technologies</title>
+
+    
+
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+
+    <style>
+.mySlides {display:none;}
+</style>
+     
+
+
+
+  </head>
+
+  <body background='{% static "img/bg-card.jpg" %}'>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" style="height:60px">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src='{% static "img/logo.png"%}' height='40px' width='200px'></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+              <a class="nav-link" href="shop">
+                Store
+              </a>
+             
+            <li class="nav-item">
+              <a class="nav-link" href="blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Services</a>
+            </li>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+           
+           
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url({% static 'img/nexcover.jpg' %}); float:center;"> 
+            <div class="carousel-caption d-none d-md-block">
+              <h3 style="color:#000000;">Next Generation Technologies</h3>
+              <p style="color:#000000"><b>Facing The Innovations</b></p>
+              <a href='services.html'><button type='btn' class='btn-primary'> Explore Our Services </button></a>
+              &nbsp&nbsp
+              <a href='blog'><button type='btn' class='btn-primary'> Visit our Blog </button></a>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url({% static 'img/escover.jpg'%})">
+            <div class="carousel-caption d-none d-md-block">
+            
+              <h3 style='color:#FF6100';>Completing your Tech Setup</h3>
+             <a href="/shop"> <button type='btn' class='btn-primary'> Head to Store </button> </a>  
+              
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url({% static 'img/gallery.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+      <h1 class="my-4" align="center"><img src="{% static 'img/explore.png' %}" height=60px>Explore the Innovations with Next Gen Technologies</h1>
+
+      <!-- Marketing Icons Section -->
+      <div class="row">
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h5 class="card-header"><img src="{% static 'img/innov.png' %}" height=31px> Get Updated with Innovations</h4>
+            <div class="card-body">
+              <p class="card-text">Stay in touch with us for latest updates on the world of technologies. We are willing to connect you with the digital world.</p>
+            </div>
+            <div class="card-footer">
+              <a href="blog" class="btn btn-primary">Explore our Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h5 class="card-header"><img src="{% static 'img/setup.png' %}" height=31px>Your Complete IT Setup</h4>
+            <div class="card-body">
+              <p class="card-text">From Computing Devices to Printing, Networking and Security/Survillence devices.   We do it all to set up your workplace on the go along with responsive websites or apps to have online presence among high volume of clients.</p>
+            </div>
+            <div class="card-footer">
+              <a href="{% url 'form' %}" class="btn btn-primary">Request for Quotations</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h5 class="card-header"><img src="{% static 'img/cart.png' %}" height=31px>Gadgets & Accessories HUB</h4>
+            <div class="card-body">
+              <p class="card-text">An attractive sets of gadgets and technology, A click away from you. Be it your next smartphone or computing devices or home appliances or any other gadget. We're here to fulfill your needs.</p>
+            </div>
+            <div class="card-footer">
+              <a href="shop" class="btn btn-primary">Visit Our Store</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-3 mb-4">
+          <div class="card h-100">
+            <h5 class="card-header"><img src="{% static 'img/cctv.png' %}" height=31px>Security/Survillence Systems</h4>
+            <div class="card-body">
+              <p class="card-text">Keep your world in control of your fingertips. From CCTV Survillence System with remote access system to modern security devices from doorlocks to fingerprint enabled lock system, put yourself on the verge of technologies.</p>
+            </div>
+            <div class="card-footer">
+              <a href="services" class="btn btn-primary">Explore our Services</a>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <!-- /.row -->
+
+      <!-- Portfolio Section -->
+      <h2 align="center"><a href='blog'><img src="{% static 'img/blog.png' %}" height=60px> &nbsp Reviews and Informations &nbsp <img src="{% static 'img/logo.png' %}" height=50px></a></h2>
+    
+      <div class="row">
+          {% for blogs in blog %}
+        <div class="col-lg-3 col-sm-6 portfolio-item">
+          <div class="card h-100" style="background-image: url({% static 'img/bg-card.jpeg'%})">
+            <a href="#"><img class="card-img-top" src={{blogs.image.url}} alt="" height="200px"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="{% url 'blogdetails' blogs.id %}">{{blogs.title | truncatechars:22}}</a>
+              </h4>
+              <p class="card-text">{{blogs.content | truncatechars:156}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+              
+      </div>
+      <div class='row'>
+      <div class="col">
+         <h2 align='center'>&nbsp &nbsp &nbsp<img src="{% static 'img/cart.png' %}" height=50px>Our Official Store - &nbsp
+    
+        <a href="shop"><img src="{% static 'img/es.jpg'%}" height="70px"> </a> &nbsp- Your Tech Solutions</h2>
+       </div>
+     </div>        <hr>
+
+       <div class='row'>
+        {% for product in products %}
+         
+        <div class="col-lg-3 col-sm-6 portfolio-item">
+          <div class="card h-100" style="background-image: {% static 'img/bg-card.jpg' %}">
+           {% for img in product.reference.all %}
+            <a href="#"><img class="mySlides" src="{{ img.image.url }}"  width="330px" height="200px" alt=""></a>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+           
+             {% endfor %} 
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="{% url 'details' product.id %}">{{product.productName}}</a>
+              </h4>
+              <p class="card-text">{{product.productDesc}}</p>
+            </div>
+          </div>
+        </div>
+       {% endfor %}
+        
+      </div>
+      <!-- /.row -->
+
+      <!-- Features Section -->
+      <div class="row">
+        <div class="col-lg-6">
+          <a href="services.html"><h2>&nbsp<img src="{% static 'img/services.png' %}" height=50px>Our Services</h2></a>
+          <p>&nbsp &nbsp The services provided by <strong>Next Gen Technologies </strong>includes:</p>
+          <ul>
+            <li>
+              <strong>Computing Devices Installation/Repair (Desktop/Laptop/Servers)
+            </li>
+            <li>Printers and Projectors</li>
+            <li>Networking and Security/Survillance System (CCTV, Doorlock, etc)</li>
+            <li>Accessories and other Gadgets</li>
+            <li>Photography and Print Services</li>
+            <li>Web Design and Development</li>
+            <li>Domain Registration and Hosting</li>
+          </ul></strong>
+          <p>We provide overall IT related Services for personnels as well as organizations. </p>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid rounded" src="{% static 'img/services.jpg' %}" alt="">
+        </div>
+      </div>
+      <!-- /.row -->
+      
+
+      <hr>
+
+      <!-- Call to Action Section -->
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <p>For any issues related to technologies, please feel free to get in touch with us.</p>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn-lg btn-secondary btn-block" href="contact.html">Connect with us</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Next Gen Technologies 2019<br>
+        Mahalaxmi-05, Lalitpur, Nepal<br>
+      +977-986-1-247561</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    
+    
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+  </body>
+
+</html>

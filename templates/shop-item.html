@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Item - Next-Gen Technologies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/shop-item.css" rel="stylesheet' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+
+  </head>
+
+  <body background="{% static 'img/bg.jpg' %}">
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" style="height:60px">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src='{% static "img/logo.png" %}' height='40px' width='200px'></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+              <a class="nav-link" href="shop">
+                Store
+              </a>
+             
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+           
+           
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br>
+
+    <!-- Page Content -->
+   
+ 
+      <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-lg-2">
+
+          <h1 class="my-4"><img src="{% static 'img/logonew.jpg'%}" style="height:60px" alt="Electro Store"></h1>
+          <div class="list-group">
+            <ul>
+            {% for category in categories %}
+            
+              <li class="list-group-item" data-toggle="collapse" data-target="#category{{category.id}}" >{{category}}</li>
+                <div id="category{{category.id}}" class="collapse">
+                  {% for subcategory in category.reference.all %}
+                    <a class="dropdown-content" href="{% url 'subcategory' subcategory.id %}">{{subcategory}}</a>
+
+                  {% endfor %}
+                </div>
+              {% endfor %}
+              </ul>
+          </div>    
+            
+         
+                
+            
+             
+              
+   
+        </div>
+
+      
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-8">
+        {% for img in products.reference.all %}
+          <div class="card mt-4">
+            <img class="mySlides" src="{{img.image.url}}" alt="">
+            
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+             {% endfor %}
+
+            <div class="card-body">
+              <div class="row">
+              <div class="col-sm-8">
+              <h3 class="card-title">{{ products.productName }}</h3>
+              <h4>{{products.productPrice}}</h4>
+              <p class="card-text">{{products.productDesc}}</p>
+              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              {{products.productRating}}stars
+              </div>
+              <div class="col-sm-4">
+                <img src="{% static 'img/cart.png' %}" height=50px> &nbsp&nbsp&nbsp&nbsp <button href="{% url 'add_to_cart' products.id %}" class="btn btn-primary" style="height:50px" >Add to Cart</button>
+                              </div>"
+            </div>
+            </div>
+          </div>
+                   <!-- /.card -->
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              Product Reviews
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              
+              <a href="#" class="btn btn-success">Leave a Review</a>
+            </div>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Next Gen Technologies 2019
+          <br>
+        Electro Store</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+  </body>
+
+</html>

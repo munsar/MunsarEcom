@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Next Gen - Services</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body background='{% static "img/bg-card.jpg" %}' style="background-size: auto ">
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" style="height:60px">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src='{% static "img/logo.png" %}' height='40px' width='200px'></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+              <a class="nav-link" href="shop">
+                Store
+              </a>
+             
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+           
+           
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+           <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url({% static 'img/service1.jpg' %}); float:center;"> 
+            <div class="carousel-caption d-none d-md-block">
+             
+              <a href='blog'><button type='btn' class='btn-primary'> Request for Quotation </button></a>
+            </div>
+          </div>
+           <div class="carousel-item" style="background-image: url({% static 'img/desk.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+              <a href='shop'><button type='btn' class='btn-primary'> Visit Store </button></a>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url({% static 'img/web.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+              <a href='shop'><button type='btn' class='btn-primary'> Request for Quotation </button></a>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url({% static 'img/services2.jpg'%})">
+            <div class="carousel-caption d-none d-md-block">
+            
+              <a href='blog'><button type='btn' class='btn-primary'> Request for Quotation </button></a>
+              
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url({% static 'img/service3.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+              <a href='blog'><button type='btn' class='btn-primary'> Request for Quotation </button></a>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+     
+      <!-- Page Heading/Breadcrumbs -->
+      <h1 class="mt-4 mb-3">Our Services </h1>
+       <h3> <small>Everything at your doorsteps</small>
+      </h3>
+
+
+      <!-- Image Header -->
+     
+
+      <!-- Marketing Icons Section -->
+      <div class="row" >
+        <div class="col-lg-4 mb-4" >
+          <div class="card h-100"  style="background-image: url({% static 'img/bg-card.jpg' %}) ">
+            <h4 class="card-header"><img src="{% static 'img/comp.png' %}" height=50px>&nbspComputing Devices <br>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspInstallation/Repair</h4>
+            <div class="card-body">
+              <p class="card-text" > We provide every kind of computers Desktop, Laptops, Smartphones & Servers along with Printers and Projectors from all reputed brands.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Request for Quotations</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100" style="background-image: url({% static 'img/bg-card.jpg' %}) ">
+            <h4 class="card-header"><img src="{% static 'img/network.png' %}" height=50px>Networking and 
+             <br>&nbsp &nbsp&nbsp &nbsp&nbsp&nbspSecurity System</h4>
+            <div class="card-body">
+              <p class="card-text">Be it your home or office network. We are here to set it up and keep everything organized and connected. Moreover we deal with CCTV Devices and Installation, along with doorlocks and attendance systems.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Request for Quotations</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100" style="background-image: url({% static 'img/bg-card.jpg' %}) ">
+            <h4 class="card-header"><img src="{% static 'img/accessories.png' %}" height=50px>Accessories and<br> &nbsp &nbsp &nbsp &nbsp other Gadgets</h4>
+            <div class="card-body">
+              <p class="card-text">Be it a smartphone gadget or computer accessories, we have wide variety of gadgets. Keep yourself surrounded with the tide of technologies.</p>
+            </div>
+            <div class="card-footer">
+              <a href="shop" class="btn btn-primary">Head to Market</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+
+        <!-- Marketing Icons Section -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100" style="background-image: url({% static 'img/bg-card.jpg' %}) ">
+            <h4 class="card-header"><img src="{% static 'img/webdesign.png' %}" height=50px>Web Design <br> &nbsp &nbsp &nbsp & Development</h4>
+            <div class="card-body">
+              <p class="card-text">Creating a profile/system for you or your profession to enhance your digital presence in an effective manner. This is our goal. Attractive design and functional system are our goals.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Request for Quotations</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100" style="background-image: url({% static 'img/bg-card.jpg' %}) ">
+            <h4 class="card-header"><img src="{% static 'img/domain.png' %}" height=50px>Domain Registration<br> &nbsp &nbsp &nbsp&nbsp &  Hosting</h4>
+            <div class="card-body">
+              <p class="card-text">Booking a Domain and keeping it live across the globe. Serving you the best hosting in the market at an effective price range. 	</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Request for Quotations</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100" style="background-image: url({% static 'img/bg-card.jpg' %}) ">
+            <h4 class="card-header"><img src="{% static 'img/cam.png' %}" height=50px>Photography and <br> &nbsp &nbsp &nbsp&nbsp&nbsp&nbspPrint Services</h4>
+            <div class="card-body">
+              <p class="card-text">Be it your personal or professional Photo-Shoot, We do it all from photography to editing & mixing to printing.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Next Gen Technologies 2019<br>Mahalaxmi-05, Lalitpur</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  </body>
+
+</html>

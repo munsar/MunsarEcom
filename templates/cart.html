@@ -1,0 +1,13 @@
+{% for cart_item in cart_items %}
+    <div>
+        <h4>{{ cart_item.product.name }}</h4>
+        <p>Price: {{ cart_item.product.price }}</p>
+        <form method="post" action="{% url 'update_cart' cart_item.id %}">
+            {% csrf_token %}
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1">
+            <button type="submit">Update</button>
+        </form>
+        <a href="{% url 'remove_from_cart' cart_item.id %}">Remove</a>
+    </div>
+{% endfor %}
